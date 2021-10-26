@@ -1,0 +1,28 @@
+# How to upload datasets from kaggle in google colab
+#  first install kaggle
+ ! pip install -q kaggle
+
+# import files so that we can upload
+# kaggle api key
+from google.colab import files
+files.upload()
+
+# kreate kaggle folder
+! mkdir ~/.kaggle
+
+# copy the kaggle.json folder created
+! cp kaggle.json ~/.kaggle/
+
+# permisstion for the json to act
+! chmod 600 ~/.kaggle/kaggle.json
+
+# list of all datasets of kaggle
+! kaggle datasets list
+
+# api key of those dataset in which you want to upload
+! kaggle datasets download -d arshid/iris-flower-dataset
+
+
+# uploaded dataset are in zip file
+# we have to upzip it 
+! unzip iris-flower-dataset.zip
