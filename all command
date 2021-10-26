@@ -7,6 +7,11 @@
 from google.colab import files
 files.upload()
 
+# this step is most importance
+# Go to your account, Scroll to API section and Click Expire API Token to remove previous tokens
+# Click on Create New API Token - It will download kaggle.json file on your machine.
+# this downladed json file now upload after run above command on google colab
+
 # kreate kaggle folder
 ! mkdir ~/.kaggle
 
